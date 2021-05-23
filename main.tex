@@ -158,23 +158,46 @@ The vertex  $\vec{A}$ can  be expressed  in {\em polar coordinate form} as
 
 
 From $\triangle ABC$,we use the law of cosines: 
+
 \begin{align}
 b^2 = a^2 + c^2 - 2ac CosB
 \\
-(c-3.5)^2 = 8^2 + c^2 -2(8)c Cos45 \quad \brak{\because c-b = 3.5}
+c^2 - b^2 + a^2 - 2ac CosB = 0
 \\
-c^2 + 12.25 - 7c = 64 + c^2 -11.31c
+(c+b)(c-b) + 8^2 - 2(8)(\frac{1}{\sqrt{2}})c = 0 \quad \brak{\because \angle B = 45^{\degree}}
 \\
-11.31c - 7c = 64 - 12.25
+3.5(c+b) + 64 - 11.31c = 0 \quad \brak{\because c-b = 3.5}
 \\
-4.31c = 51.75
-\\
-\implies c=12
+\implies 7.81c - 3.5b = 64
 \end{align}
 
+And we have,
+\begin{align}
+c - b = 3.5
+\end{align}
+
+which can be expressed as the matrix equation
+\begin{equation}
+\begin{bmatrix}
+7.81 & -3.5 \\
+1 & -1
+\end{bmatrix}
+\begin{bmatrix}
+c \\ b 
+\end{bmatrix}
+=
+\begin{bmatrix}
+64 \\ 3.5
+\end{bmatrix}
+
+\end{equation}
+
+Therefore,
+\begin{align}
+c = 12
+\end{align}
 
 So,the vertices of $\triangle ABC$ are
-
 \begin{align}
 \vec{A} = 12\myvec{\cos45\\\sin45} = \myvec{8.4\\8.4} ,\vec{B} = \myvec{0\\0},\vec{C} = \myvec{8\\0}
 \end{align}
@@ -185,7 +208,7 @@ Plot of the  $\triangle ABC$:
 \numberwithin{figure}{section}
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=\columnwidth]{Fig.1.png}
+    \includegraphics[width=\columnwidth]{Fig1.png}
     \caption{$\triangle ABC$}
     \label{fig:$\triangle LMN$}
 \end{figure}
